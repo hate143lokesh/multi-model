@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0B0F19] text-slate-100 font-sans;
+    background-image: 
+      radial-gradient(at 10% 20%, rgba(249, 115, 22, 0.05) 0px, transparent 40%),
+      radial-gradient(at 90% 80%, rgba(14, 165, 233, 0.04) 0px, transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom Scrollbar for Construction Dashboard */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F97316;
+}
+
+/* Glass Card helper */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(55, 65, 81, 0.6);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  border-color: rgba(249, 115, 22, 0.4);
+  box-shadow: 0 4px 20px -2px rgba(249, 115, 22, 0.1);
+  transform: translateY(-1px);
+}
